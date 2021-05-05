@@ -18,7 +18,6 @@ public class MyGdxGame extends ApplicationAdapter {
     BitmapFont font;
 
     private MainCar car;
-    Array<> enemy = new Array<>();
     Texture img;
     Texture imgCar1;
     Texture imgCar2[] = new Texture[2];
@@ -36,7 +35,7 @@ public class MyGdxGame extends ApplicationAdapter {
         img = new Texture("doroga.png");
         doroga[0] = new Doroga(0, 0);
         doroga[1] = new Doroga(0, SCR_HEIGHT);
-        car = new MainCar(SCR_WIDTH/5*4,SCR_HEIGHT/6,100,220);
+        car = new MainCar(SCR_WIDTH/5*4,SCR_HEIGHT/6,120,250);
     }
 
     @Override
