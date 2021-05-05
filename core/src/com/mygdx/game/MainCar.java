@@ -5,6 +5,7 @@ public class MainCar {
     float width, height;
     float x,y;
     float dx,dy;
+    float vx=6;
 
     boolean isAlive = true;
 
@@ -16,8 +17,8 @@ public class MainCar {
     }
 
     void drive(float tx,float ty){
-        if (tx>x)x++;
-        if (tx<x)x--;
+        if (tx>x)x+=vx;
+        if (tx<x)x-=vx;
         //if (tx>x) dx++;
         //if (tx<x) dx--;
 }

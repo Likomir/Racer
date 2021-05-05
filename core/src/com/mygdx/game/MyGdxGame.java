@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.utils.Array;
 
 public class MyGdxGame extends ApplicationAdapter {
     public static final int SCR_HEIGHT = 800, SCR_WIDTH = 800;
@@ -17,8 +18,10 @@ public class MyGdxGame extends ApplicationAdapter {
     BitmapFont font;
 
     private MainCar car;
+    Array<> enemy = new Array<>();
     Texture img;
     Texture imgCar1;
+    Texture imgCar2[] = new Texture[2];
     Doroga doroga[] = new Doroga[2];
 
     @Override
@@ -28,11 +31,12 @@ public class MyGdxGame extends ApplicationAdapter {
         camera.setToOrtho(false, SCR_WIDTH, SCR_HEIGHT);
         touchPos = new Vector3();
 
-        imgCar1 = new Texture("car1.png");
+        imgCar1 = new Texture("carm.png");
+        imgCar2[0] = new Texture("carre.png");
         img = new Texture("doroga.png");
         doroga[0] = new Doroga(0, 0);
         doroga[1] = new Doroga(0, SCR_HEIGHT);
-        car = new MainCar(SCR_WIDTH/5*4,SCR_HEIGHT/6,70,150);
+        car = new MainCar(SCR_WIDTH/5*4,SCR_HEIGHT/6,100,220);
     }
 
     @Override
