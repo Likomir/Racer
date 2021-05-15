@@ -8,14 +8,14 @@ public class Doroga {
         public Doroga (float x, float y){
             this.x=x;
             this.y=y;
-            width = MyGdxGame.SCR_WIDTH;
-            height = MyGdxGame.SCR_HEIGHT;
+            width = MainGame.SCR_WIDTH;
+            height = MainGame.SCR_HEIGHT;
             dy=-3;
         }
 
         void move() {
             y += dy;
-            if (y < -MyGdxGame.SCR_HEIGHT) y = MyGdxGame.SCR_HEIGHT;
+            if (y < -MainGame.SCR_HEIGHT) y = MainGame.SCR_HEIGHT;
         }
     }
 
